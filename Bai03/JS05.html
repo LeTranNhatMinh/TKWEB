@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class TaiKhoanNganHang {
+        constructor() {
+          this.soDu = 0;
+        }
+        guiTien(soTien) {
+          this.guiTien = soTien;
+        }
+        rutTien(soTien) {
+          this.rutTien = soTien;
+        }
+        kiemTraSoDu() {
+          return (this.soDu = this.guiTien - this.rutTien);
+        }
+        KTSD() {
+          return this.soDu;
+        }
+      }
+      // Ví dụ sử dụng
+      const taiKhoan = new TaiKhoanNganHang();
+      taiKhoan.guiTien(1000);
+      taiKhoan.rutTien(200);
+      console.log(taiKhoan.kiemTraSoDu()); // Kết quả: 800
+    </script>
+  </body>
+</html>
