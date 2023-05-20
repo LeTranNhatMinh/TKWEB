@@ -10,7 +10,7 @@ class TaiKhoanNganHang {
     this.rutTien = soTien;
   }
   kiemTraSoDu() {
-    return (this.soDu = this.guiTien - this.rutTien);
+    return this.guiTien - this.rutTien;
   }
 
 }
