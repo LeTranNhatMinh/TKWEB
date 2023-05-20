@@ -4,13 +4,13 @@ class TaiKhoanNganHang {
     this.soDu = 0;
   }
   guiTien(soTien) {
-    this.guiTien = soTien;
+    this.guiTien = this.soDu + soTien;
   }
   rutTien(soTien) {
     this.rutTien = soTien;
   }
   kiemTraSoDu() {
-    return this.guiTien - this.rutTien;
+    return (this.soDu = this.guiTien - this.rutTien);
   }
 
 }
