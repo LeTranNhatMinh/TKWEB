@@ -7,16 +7,13 @@
           this.soDu = 0;
         }
         guiTien(soTien) {
-          this.guiTien = this.soDu + soTien;
+          this.guiTien =soTien;
         }
         rutTien(soTien) {
           this.rutTien = soTien;
         }
         kiemTraSoDu() {
           return (this.soDu = this.guiTien - this.rutTien);
-        }
-        KTSD() {
-          return this.soDu;
         }
       }
       // Ví dụ sử dụng
