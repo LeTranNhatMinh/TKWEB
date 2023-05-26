@@ -1,0 +1,39 @@
+<html>
+  <style>
+    div {
+      display: block;
+    }
+  </style>
+  <body>
+    <div id="guiTien"></div>
+    <div id="rutTien"></div>
+    <div id="soDu"></div>
+    <script>
+      class TaiKhoanNganHang {
+        constructor() {
+          this.soDu = 0;
+        }
+        guiTien(soTien) {
+          this.guiTien = this.soDu + soTien;
+        }
+        rutTien(soTien) {
+          this.rutTien = soTien;
+        }
+        kiemTraSoDu() {
+          return (this.soDu = this.guiTien - this.rutTien);
+        }
+      }
+      // Ví dụ sử dụng
+      const taiKhoan = new TaiKhoanNganHang();
+      taiKhoan.guiTien(1000);
+      taiKhoan.rutTien(200);
+      document.getElementById("guiTien").innerHTML =
+        "Tiền Gửi: " + taiKhoan.guiTien;
+      document.getElementById("rutTien").innerHTML =
+        "Tiền Rút: " + taiKhoan.rutTien;
+      document.getElementById("soDu").innerHTML =
+        "Số dư: " + taiKhoan.kiemTraSoDu();
+      console.log(taiKhoan.kiemTraSoDu()); // Kết quả: 800
+    </script>
+  </body>
+</html>
