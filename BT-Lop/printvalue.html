@@ -1,0 +1,59 @@
+<html>
+  <style>
+    body p {
+      display: inline-block;
+    }
+    body input {
+      display: inline-block;
+      padding: 8px;
+    }
+    body button {
+        margin-left: 26px;
+        padding: 8px;
+    }
+    body div {
+      margin-top: 6px;
+    }
+  </style>
+  <body>
+    <div id="input">
+      <p>n =</p>
+      <input type="text" id="input-value" />
+    </div>
+    <button onclick="chan()" id="tag-chan">Chan</button>
+    <button onclick="le()" id="tag-name">Le</button>
+    <button onclick="from1n()" id="tag-name">1-n</button>
+    <div id="chan"></div>
+    <div id="le"></div>
+    <div id="from1-n"></div>
+  </body>
+  <script>
+   
+    function le() {
+      let s = document.getElementById("input-value").value;
+      document.getElementById("le").innerHTML = "Day le = ";
+
+      for (var i = 1; i <= s; i++) {
+        if (i % 2 != 0) {
+          document.getElementById("le").innerHTML += " " + i;
+        }
+      }
+    } function chan() {
+      let s = document.getElementById("input-value").value;
+      document.getElementById("chan").innerHTML = "Day chan = ";
+      for (var i = 1; i <= s; i++) {
+        if (i % 2 == 0) {
+          document.getElementById("chan").innerHTML += " " + i;
+        }
+      }
+    }
+    function from1n() {
+      let s = document.getElementById("input-value").value;
+      document.getElementById("from1-n").innerHTML = "Day 1 - n = ";
+
+      for (var i = 1; i <= s; i++) {
+        document.getElementById("from1-n").innerHTML += " " + i;
+      }
+    }
+  </script>
+</html>
