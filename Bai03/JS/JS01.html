@@ -1,10 +1,12 @@
 <html>
   <body>
+    <div id="soChan"></div>
+    <div id="soLe"></div>
     <script>
       function kiemTraChanLe(so) {
         if (so % 2 == 0) {
-          document.writeln(`${so} la so chan`);
-        } else document.writeln(`${so}  la so le` );
+           document.getElementById("soChan").innerHTML = (`${so}  la so chan` );
+        } else document.getElementById("soLe").innerHTML = (`${so}  la so le` );
       }
 
       // Ví dụ sử dụng
