@@ -1,9 +1,4 @@
 <html>
-  <style>
-    div {
-      display: block;
-    }
-  </style>
   <body>
     <div id="guiTien"></div>
     <div id="rutTien"></div>
@@ -15,12 +10,14 @@
         }
         guiTien(soTien) {
           this.guiTien = this.soDu + soTien;
+          this.soDu = this.guiTien;
         }
         rutTien(soTien) {
           this.rutTien = soTien;
+          this.soDu = this.soDu - this.rutTien;
         }
         kiemTraSoDu() {
-          return (this.soDu = this.guiTien - this.rutTien);
+          return this.soDu;
         }
       }
       // Ví dụ sử dụng
@@ -33,6 +30,7 @@
         "Tiền Rút: " + taiKhoan.rutTien;
       document.getElementById("soDu").innerHTML =
         "Số dư: " + taiKhoan.kiemTraSoDu();
+
       console.log(taiKhoan.kiemTraSoDu()); // Kết quả: 800
     </script>
   </body>
