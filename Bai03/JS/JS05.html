@@ -9,12 +9,10 @@
           this.soDu = 0;
         }
         guiTien(soTien) {
-          this.guiTien = this.soDu + soTien;
-          this.soDu = this.guiTien;
+          this.soDu += soTien;
         }
         rutTien(soTien) {
-          this.rutTien = soTien;
-          this.soDu = this.soDu - this.rutTien;
+          this.soDu -= soTien;
         }
         kiemTraSoDu() {
           return this.soDu;
